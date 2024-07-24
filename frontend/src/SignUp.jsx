@@ -19,7 +19,7 @@ function Register() {
     event.preventDefault();
     // console.log(formData);
     try {
-      const api="http://localhost:7000/api/users";
+      const api=`${process.env.REACT_BACKEND_URL}/api/users`;
       const response = await axios.post(
         api+"/register",
         formData
