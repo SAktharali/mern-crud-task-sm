@@ -14,8 +14,11 @@ connectDB();
 app.use(express.json());
 app.use(cors());
 
+// Default route
+app.get("/", (req, res) => {
+  res.send("API is working");
+});
 // Routes
-
 app.use("/api/users",require("./routes/userRoutes.js"))
 
 const port = process.env.PORT || 7000;
