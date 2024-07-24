@@ -8,7 +8,7 @@ const Home = () => {
   const { user } = useSelector((state) => state.user);
   const navigate = useNavigate(); 
   
-  const apiUrl = 'http://localhost:7000/api/users';
+  const apiUrl = `${process.env.REACT_BACKEND_URL}/api/users`;
 
   const handleLogOut = () => {
     if (window.confirm('Are you sure you want to log out?')) {

@@ -11,7 +11,7 @@ const Profile = () => {
     password: ''
   });
 
-  const apiUrl = 'http://localhost:7000/api/users';
+  const apiUrl = `${process.env.REACT_BACKEND_URL}/api/users`;
 
   useEffect(() => {
     const getUserData = async () => {
