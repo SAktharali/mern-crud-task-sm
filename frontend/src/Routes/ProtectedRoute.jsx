@@ -12,7 +12,7 @@ const ProtectedRoute = ({children}) => {
   const getUser = async () => {
     try {
       const res = await axios.post(
-        "http://localhost:7000/api/users/getUsers",
+        `${process.env.REACT_BACKEND_URL}/api/users/getUsers`,
         { token: localStorage.getItem("token") },
         {
           headers: {
